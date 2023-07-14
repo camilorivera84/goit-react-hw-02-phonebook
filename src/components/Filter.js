@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Filter = ({ value, onChange }) => {
   return (
-    <div>
+    <div className="contact_add">
       <label>
         Filter contacts:
         <input type="text" value={value} onChange={onChange} />

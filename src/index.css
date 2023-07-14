@@ -38,7 +38,10 @@ form {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  border: 1px solid blue;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 10px rgb(251, 255, 0),
+    0 0 10px rgb(242, 255, 0);
 }
 
 label {
@@ -100,4 +103,36 @@ button.delete {
 
 button.delete:hover {
   background-color: #b52a37;
+}
+
+.delete-button {
+  background-color: white;
+  color: #000;
+  border: 1px solid gray;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: blue;
+  color: white;
+}
+
+.contact_add {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 10px rgb(0, 208, 255),
+    0 0 10px rgb(0, 213, 255);
+}
+
+.list_contacts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 10px rgb(255, 38, 0),
+    0 0 10px rgb(255, 13, 0);
 }

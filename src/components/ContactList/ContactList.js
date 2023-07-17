@@ -1,21 +1,56 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const List = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 300px;
+`;
+
+const ListItem = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+`;
+
+const ContactName = styled.span`
+  font-weight: bold;
+`;
+
+const DeleteButton = styled.button`
+  background-color: white;
+  color: #000;
+  border: 1px solid gray;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: blue;
+    color: white;
+  }
+`;
 
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
-    <ul className='list_contacts'>
+    <List className="list_contacts">
       {contacts.map(contact => (
-        <li key={contact.id}>
-          {contact.name}: {contact.number}
-          <button
+        <ListItem key={contact.id}>
+          <ContactName>{contact.name}:</ContactName> {contact.number}
+          <DeleteButton
             className="delete-button"
             onClick={() => onDeleteContact(contact.id)}
           >
             Delete
-          </button>
-        </li>
+          </DeleteButton>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 
